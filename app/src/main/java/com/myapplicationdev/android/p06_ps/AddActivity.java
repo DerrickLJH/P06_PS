@@ -46,6 +46,7 @@ public class AddActivity extends AppCompatActivity {
                         getSystemService(Activity.ALARM_SERVICE);
                 am.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
                         pendingIntent);
+                finish();
             }
         });
         btncancel.setOnClickListener(new View.OnClickListener() {
