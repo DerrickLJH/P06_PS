@@ -39,7 +39,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    public long insertNote(String name , String Desc) {
+    public long insertTask(String name , String Desc) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_NAME, name);
