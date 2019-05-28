@@ -39,11 +39,12 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    public long insertTask(String name , String Desc) {
+    public long insertTask(String name , String Desc,int time) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_NAME, name);
         values.put(COLUMN_DESC, Desc);
+        values.put(COLUMN_TIME, time);
         long result = db.insert(TABLE_TASK, null, values);
         db.close();
         Log.d("SQL Insert ",""+ result); //id returned, shouldn’t be -1
